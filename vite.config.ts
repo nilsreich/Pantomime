@@ -14,7 +14,7 @@ export default defineConfig({
       globPatterns: ['**/*.{js,css,html,ico,png,svg,mp3}'] // Ensure mp3 is cached
     },
     devOptions: {
-      enabled: true, // Enable PWA in development mode
+      enabled: false, // Enable PWA in development mode
     },
     manifest: {
       name: 'Mein React template',
