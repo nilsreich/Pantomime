@@ -11,7 +11,7 @@ export default defineConfig({
     workbox: {
       clientsClaim: true,
       skipWaiting: true,
-      globPatterns: ['**/*.{js,css,html,ico,png,svg,mp3}'] // Ensure mp3 is cached
+      globPatterns: ['**/*.{js,css,html,ico,png,avif}'] 
     },
     devOptions: {
       enabled: false, // Enable PWA in development mode
