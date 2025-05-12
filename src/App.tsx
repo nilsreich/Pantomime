@@ -1,13 +1,10 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 const images = [
   "/images/astronaut.avif",
   "/images/doktor.avif",
   "/images/fensterputzer.avif",
   "/images/koch.avif",
-  // Fügen Sie hier weitere Bildpfade hinzu, z.B.:
-  // "/images/image2.avif",
-  // "/images/image3.avif",
 ];
 
 function App() {
@@ -19,7 +16,7 @@ function App() {
   };
 
   useEffect(() => {
-    getRandomImage(); // Load a random image on initial render
+    getRandomImage();
   }, []);
 
   return (
