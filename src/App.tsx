@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 // Define images outside the component - good practice as it doesn't change
 const images = [
@@ -18,6 +18,16 @@ const getRandomElement = (arr: string[]) => {
 
 function App() {
   const [currentImage, setCurrentImage] = useState(() => getRandomElement(images));
+
+  useEffect(() => {
+    // Preload images
+    images.forEach((imageSrc) => {
+      if (imageSrc) { // Ensure imageSrc is not undefined
+        const img = new Image();
+        img.src = imageSrc;
+      }
+    });
+  }, []); // Empty dependency array ensures this runs only once on mount
 
   const showNextRandomImage = () => {
     if (images.length <= 1) {
