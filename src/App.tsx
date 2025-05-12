@@ -9,7 +9,7 @@ const images = [
 ];
 
 // Helper function to get a random element from an array
-const getRandomElement = (arr) => {
+const getRandomElement = (arr: string[]) => {
   if (!arr || arr.length === 0) {
     return undefined; // Handle empty or non-existent array
   }
